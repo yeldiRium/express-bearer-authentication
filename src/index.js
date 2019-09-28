@@ -1,7 +1,7 @@
 /**
  * Returns a middleware function that checks a requests Authorization header
  * against an authentication function.
- * Tha `authenticateToken` function either returns a user object for a valid
+ * The `authenticateToken` function either returns a user object for a valid
  * token or `null` for an invalid token.
  * The returned user object is attached to the request under `req.user` or under
  * `req[targetField]`.
