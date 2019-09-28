@@ -32,7 +32,7 @@ const authenticate = async token => {
 app.use(withBearerAuth(authenticate));
 ```
 
-When the token is invalid or no user is found for it, the middleware will abort the request and return a status code of 400.
+When the token is invalid or no user is found for it, the middleware will abort the request and return a status code of 401.
 
 Otherwise it will attach the returned user object to request under `req.user`.
 
