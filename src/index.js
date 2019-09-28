@@ -32,11 +32,11 @@ const withBearerToken = (authenticateToken, targetField = "user") => async (
 
   try {
     const user = await authenticateToken(token);
-    if (user !== null) {
+    if (user === null || user === undefined) {
+      fail();
+    } else {
       req[targetField] = user;
       next();
-    } else {
-      fail();
     }
   } catch (e) {
     res.status(500);
