@@ -10,12 +10,13 @@ yarn install @yeldirium/express-bearer-authentication
 
 ## Status
 
-| Category         | Status                                                                                                                                                                                               |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Version          | [![npm version](http://img.shields.io/npm/v/@yeldirium/express-bearer-authentication.svg?style=flat)](https://npmjs.org/package/@yeldirium/express-bearer-authentication "View this project on npm") |
-| Dependencies     | ![David](https://img.shields.io/david/yeldirium/express-bearer-authentication)                                                                                                                       |
-| Dev dependencies | ![David](https://img.shields.io/david/dev/yeldirium/express-bearer-authentication)                                                                                                                   |
-| Build            | [![Build Status](https://travis-ci.org/yeldiRium/express-bearer-authentication.svg?branch=master)](https://travis-ci.org/yeldiRium/express-bearer-authentication)                                    |
+| Category         | Status                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Version          | [![npm](https://img.shields.io/npm/v/@yeldirium/express-bearer-authentication)](https://www.npmjs.com/package/@yeldirium/express-bearer-authentication) |
+| Dependencies     | ![David](https://img.shields.io/david/yeldirium/express-bearer-authentication)                                                                          |
+| Dev dependencies | ![David](https://img.shields.io/david/dev/yeldirium/express-bearer-authentication)                                                                      |
+| Build            | ![GitHub Actions](https://github.com/yeldiRium/express-bearer-authentication/workflows/Release/badge.svg?branch=master)                                 |
+| License          | ![GitHub](https://img.shields.io/github/license/yeldiRium/express-bearer-authentication)                                                                |
 
 ## How it works
 
