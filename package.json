@@ -1,6 +1,6 @@
 {
   "name": "@yeldirium/express-bearer-authentication",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An express.js middleware for customisable bearer authentication.",
   "keywords": [
     "express",
