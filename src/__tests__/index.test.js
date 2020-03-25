@@ -2,9 +2,9 @@ const withBearerToken = require("../");
 
 describe("withBearerToken", () => {
   it("accepts a request with a valid token", () => {
-    return new Promise(done => {
+    return new Promise((done) => {
       const userObj = {};
-      const authenticateToken = async token => {
+      const authenticateToken = async (token) => {
         if (token === "1337") {
           return userObj;
         }
@@ -21,7 +21,7 @@ describe("withBearerToken", () => {
         },
         status: () => {
           done.fail("status was called, but next should have been called.");
-        }
+        },
       };
       const next = jest.fn(() => {
         expect(next).toBeCalled();
@@ -34,8 +34,8 @@ describe("withBearerToken", () => {
   });
 
   it("rejects a request without a token", () => {
-    return new Promise(done => {
-      const authenticateToken = async token => {
+    return new Promise((done) => {
+      const authenticateToken = async (token) => {
         if (token === "1337") {
           return {};
         }
@@ -48,9 +48,9 @@ describe("withBearerToken", () => {
       const req = { header };
       const res = {
         end: done,
-        status: code => {
+        status: (code) => {
           expect(code).toBe(401);
-        }
+        },
       };
       const next = () => {
         done.fail("Request should have been rejected, but next was called.");
@@ -62,8 +62,8 @@ describe("withBearerToken", () => {
   });
 
   it("rejects a request with an invalid token", () => {
-    return new Promise(done => {
-      const authenticateToken = async token => {
+    return new Promise((done) => {
+      const authenticateToken = async (token) => {
         if (token === "1337") {
           return {};
         }
@@ -76,9 +76,9 @@ describe("withBearerToken", () => {
       const req = { header };
       const res = {
         end: done,
-        status: code => {
+        status: (code) => {
           expect(code).toBe(401);
-        }
+        },
       };
       const next = () => {
         done.fail("Request should have been rejected, but next was called.");
@@ -89,7 +89,7 @@ describe("withBearerToken", () => {
   });
 
   it("rejects a request when the fetch function fails", () => {
-    return new Promise(done => {
+    return new Promise((done) => {
       const authenticateToken = async () => {
         throw new Error("Something went wrong.");
       };
@@ -100,9 +100,9 @@ describe("withBearerToken", () => {
       const req = { header };
       const res = {
         end: done,
-        status: code => {
+        status: (code) => {
           expect(code).toBe(500);
-        }
+        },
       };
       const next = () => {
         done.fail("Request should have been rejected, but next was called.");
