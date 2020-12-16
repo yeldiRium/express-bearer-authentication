@@ -1,5 +1,9 @@
 # Express Bearer Authentication
 
+**This library is no longer maintained**
+
+It is advised to use [passport.js](https://www.npmjs.com/package/passport) with the [passport-http-bearer](https://www.npmjs.com/package/passport-http-bearer) strategy instead.
+
 An express.js middleware for customisazle bearer token authentication.
 
 ```sh
